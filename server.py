@@ -11,12 +11,12 @@ import sys
 
 #-----------------------------
 '''Handle the CTRL-C signal.'''
-def close_socket(sig):
+def close_socket(sig): #攔截到ctrl+c訊號後要做的動作
     print('Server Socket Closed')
     server_socket.close()
     sys.exit(1)
 
-# def install_handler():
+# def install_handler(): #設定OS指令去攔截ctrl+c的訊號 後去做動作
     # if 'win' in sys.platform :
         # import win32api
         # win32api.SetConsoleCtrlHandler(close_socket, True)
